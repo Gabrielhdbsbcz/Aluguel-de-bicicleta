@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalize seu aluguel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5.5" cy="17.5" r="3.5" />
+                <circle cx="18.5" cy="17.5" r="3.5" />
+                <path d="M5.5 17.5l3-8 4 3 2.5-5H19l-3.5 3.5" />
+            </svg>
+            Pedal<span> Fácil</span>
+        </a>
+
+        <a href="bikes.html" class="voltar">
+            ← Voltar
+        </a>
+    </header>
+
+    <main class="reserva">
+        <span class="categoria">
+            FORMULÁRIO DE RESERVA
+        </span>
+
+        <h1>
+            Finalize seu aluguel
+        </h1>
+
+        <section class="resumo-bike">
+            <img src="https://images.unsplash.com/photo-1673121414328-52eff37bc6d0?w=600&h=400&fit=crop&auto=format">
+
+
+            <div class="info-bike">
+                <span>
+                    MOUNTAIN BIKE
+                </span>
+                <h2>
+                    Trek X-Cal 29
+                </h2>
+                <small>
+                    R$ 45,00 / dia
+                </small>
+            </div>
+
+            <span class="dias">
+                2 dias
+            </span>
+
+            <strong class="total-bike">
+                R$ 90,00
+            </strong>
+        </section>
+
+        <form class="formulario">
+
+            <span class="titulo-form">
+                DADOS PESSOAIS
+            </span>
+
+            <div class="campo  campo-grande">
+                <label for="nome">
+                    Nome completo *
+                </label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva" required>
+            </div>
+
+            <div class="campo telefone">
+                <label for="telefone">
+                    Telefone *
+                </label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-0000" required>
+            </div>
+
+            <span class="titulo-form">
+                ENDEREÇO COMPLETO
+            </span>
+
+            <div class="linha">
+                <div class="campo cep">
+                    <label for="cep">
+                        CEP *
+                    </label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                </div>
+
+                <div class="campo logradouro">
+                    <label for="logradouro">
+                        Logradouro *
+                    </label>
+                    <input type="text" id="logradouro" name="logradouro" placeholder="Rua, Avenida, etc." required>
+                </div>
+            </div>
+
+            <div class="linha">
+                <div class="campo numero">
+                    <label for="numero">
+                        Número *
+                    </label>
+                    <input type="text" id="numero" name="numero" placeholder="123" required>
+                </div>
+
+                <div class="campo bairro">
+                    <label for="bairro">
+                        Bairro *
+                    </label>
+                    <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required>
+                </div>
+
+                <div class="campo cidade">
+                    <label for="cidade">
+                        Cidade *
+                    </label>
+                    <input type="text" id="cidade" name="cidade" placeholder="São Paulo" required>
+                </div>
+
+                <div class="campo uf">
+                    <label for="uf">
+                        UF *
+                    </label>
+                    <input type="text" id="uf" name="uf" placeholder="SP" maxlength="2" required>
+                </div>
+            </div>
+
+            <span class="titulo-form">
+                PERÍODO DO EMPRÉSTIMO
+            </span>
+
+            <div class="linha periodo">
+                <div class="campo">
+                    <label for="retirada">
+                        Data de retirada *
+                    </label>
+                    <input type="date" id="retirada" name="retirada" required>
+                </div>
+
+                <div class="campo">
+                    <label for="horario">
+                        Horário de retirada *
+                    </label>
+                    <input type="time" id="horario" name="horario" required>
+                </div>
+
+                <div class="campo">
+                    <label for="devolucao">
+                        Data de devolução *
+                    </label>
+                    <input type="date" id="devolucao" name="devolucao" required>
+                </div>
+            </div>
+
+            <div class="box-total">
+                <div>
+                    <strong>
+                        2 dias × R$ 45,00
+                    </strong>
+                    <small>
+                        Pagamento na retirada
+                    </small>
+                </div>
+
+                <strong>
+                    R$ 90,00
+                </strong>
+            </div>
+
+            <button type="submit" class="confirmar">
+                Confirmar reserva
+            </button>
+
+        </form>
+    </main>
+</body>
+
+</html>

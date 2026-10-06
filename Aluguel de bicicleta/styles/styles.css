@@ -1,0 +1,782 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+ .logo svg{
+    color: #0d943f;
+ }
+
+.logo span {
+    color: #16a34a;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #16a34a;
+}
+
+.menu .alugar {
+    background-color: #15803d;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.Pedal {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 120px 10% 80px;
+    position: relative;
+}
+
+.pedal-conteudo {
+    width: 45%;
+    max-width: 500px;
+    z-index: 2;
+}
+
+.pedal-conteudo > p {
+    display: inline-block;
+    color: #16a34a;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.Pedal h1 {
+    font-size: 45px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.Pedal h2 {
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #15803d;
+    color: #ffffff;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.botao:hover {
+    background-color: #166534;
+}
+
+.link-como {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.link-como:hover {
+    color: #16a34a;
+}
+
+.imagem {
+    position: absolute;
+    top: 130px;
+    right: 8%;
+    width: 43%;
+    z-index: 1;
+}
+
+.imagem img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.estatiscas {
+    position: absolute;
+    left: 10%;
+    bottom: 55px;
+    display: flex;
+    gap: 50px;
+}
+
+.estatisca {
+    display: flex;
+    flex-direction: column;
+}
+
+.estatisca h3 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.estatisca p {
+    font-size: 9px;
+    color: #94a3b8;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.como-funciona {
+    background-color: #f5f5f5;
+    padding: 70px 10% 90px;
+    text-align: center;
+}
+
+.subtitulo {
+    display: block;
+    color: #16a34a;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.titulo-card {
+    font-size: 27px;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+.conteudocards {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    min-height: 190px;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.numero-card {
+    display: block;
+    color: #16a34a;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.card h2 {
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #0f172a;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.catalogo {
+    max-width: 1060px;
+    margin: auto;
+    padding: 110px 20px 60px;
+}
+
+.titulo-catalogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 28px;
+}
+
+.categoria {
+    display: block;
+    color: #16a34a;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.titulo-catalogo h1 {
+    font-size: 27px;
+    color: #0f172a;
+}
+
+.modelos {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.cards-bikes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+.card-bike {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    transition: 0.3s;
+}
+
+.card-bike:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.imagem-card {
+    height: 110px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.imagem-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #16a34a;
+    color: #ffffff;
+    padding: 4px 7px;
+    border-radius: 7px;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.badge.cinza {
+    background-color: #64748b;
+}
+
+.conteudo-card {
+    padding: 12px;
+}
+
+.tipo {
+    display: block;
+    color: #16a34a;
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.conteudo-card h2 {
+    font-size: 12px;
+    color: #0f172a;
+    margin-bottom: 7px;
+}
+
+.conteudo-card p {
+    color: #64748b;
+    font-size: 8px;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+.preco-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.preco-status small {
+    display: block;
+    color: #94a3b8;
+    font-size: 7px;
+    margin-bottom: 2px;
+}
+
+.preco-status strong {
+    font-size: 12px;
+    color: #0f172a;
+}
+
+.disponivel {
+    color: #16a34a;
+    font-size: 7px;
+}
+
+.indisponivel {
+    color: #aeb7c1;
+    font-size: 7px;
+}
+
+.botao-bike {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 26px;
+    background-color: #16a34a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-bike:hover {
+    background-color: #15803d;
+}
+
+.desativado {
+    background-color: #f1f5f9;
+    color: #aeb7c1;
+    cursor: not-allowed;
+}
+
+.banner {
+    height: 98px;
+    margin-top: 12px;
+    padding: 25px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #119747;
+    border-radius: 14px;
+    color: white;
+}
+
+.banner h2 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.banner p {
+    font-size: 8px;
+}
+
+.banner a {
+    background-color: white;
+    color: #0d9546;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+
+.reserva {
+    width: 430px;
+    max-width: calc(100% - 40px);
+    margin: auto;
+    padding: 105px 0 50px;
+}
+
+.reserva h1 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.voltar {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.voltar:hover {
+    color: #16a34a;
+}
+
+.resumo-bike {
+    width: 100%;
+    min-height: 62px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 23px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.resumo-bike img {
+    width: 43px;
+    height: 43px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.info-bike {
+    flex: 1;
+    margin-left: 9px;
+}
+
+.info-bike span {
+    display: block;
+    color: #16a34a;
+    font-size: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.info-bike h2 {
+    font-size: 10px;
+    color: #0f172a;
+    margin-bottom: 3px;
+}
+
+.info-bike small {
+    color: #16a34a;
+    font-size: 7px;
+}
+
+.dias {
+    color: #94a3b8;
+    font-size: 7px;
+    margin-right: 18px;
+}
+
+.total-bike {
+    color: #0f172a;
+    font-size: 13px;
+}
+
+.formulario {
+    width: 100%;
+}
+
+.titulo-form {
+    display: block;
+    color: #7e8da0;
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin: 20px 0 10px;
+
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    color: #334155;
+    font-size: 8px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    height: 25px;
+    padding: 0 9px;
+    border: 1px solid #d8e0e7;
+    border-radius: 6px;
+    outline: none;
+    background-color: #ffffff;
+    color: #334155;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: #a7b2bf;
+}
+
+.campo input:focus {
+    border-color: #16a34a;
+    box-shadow:   0 0 0 2px rgba(22, 163, 74, 0.08);
+}
+
+.telefone {
+    width: 185px;
+    flex: none;
+}
+
+.linha {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+
+.cep {
+    width: 105px;
+    flex: none;
+}
+
+.logradouro {
+    flex: 1;
+}
+
+.numero {
+    width: 63px;
+    flex: none;
+}
+
+.bairro {
+    width: 117px;
+    flex: none;
+}
+
+.cidade {
+    width: 117px;
+    flex: none;
+}
+
+.uf {
+    width: 57px;
+    flex: none;
+}
+
+.periodo{
+    gap: 8px;
+}
+
+.periodo .campo {
+    width: 120px;
+    flex: 1;
+}
+
+
+.box-total {
+    height: 48px;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0fff5;
+    border: 1px solid #9ce7b9;
+    border-radius: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.box-total div {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-total div strong {
+    color: #087d3a;
+    font-size: 8px;
+
+}
+
+.box-total small {
+    color: #5f9d76;
+    font-size: 6px;
+    margin-top: 2px;
+}
+
+.box-total > strong {
+    color: #087d3a;
+    font-size: 15px;
+}
+
+
+
+
+.confirmar {
+    width: 100%;
+    height: 28px;
+    border: none;
+    border-radius: 7px;
+    background-color: #10a84b;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 5px 10px
+        rgba(16, 168, 75, 0.18);
+
+}
+
+.confirmar:hover {
+    background-color: #0d943f;
+
+}
+
+@media (max-width: 850px) {
+
+    .imagem {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 80%;
+        margin: 0 auto 30px;
+    }
+
+    .imagem img {
+        height: 350px;
+    }
+
+    .Pedal {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+
+    .pedal-conteudo {
+        width: 100%;
+    }
+
+    .estatiscas {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .cards-bikes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudocards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .cabecalho {
+        padding: 0 20px;
+    }
+
+    .menu ul {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 10px;
+    }
+
+    .menu .alugar {
+        padding: 7px 10px;
+    }
+
+    .Pedal h1 {
+        font-size: 34px;
+    }
+
+    .Pedal h2 {
+        font-size: 13px;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cards-bikes {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-catalogo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .linha {
+        flex-wrap: wrap;
+    }
+
+    .cep,
+    .logradouro,
+    .numero,
+    .bairro,
+    .cidade,
+    .uf,
+    .periodo .campo {
+        width: 100%;
+        flex: none;
+    }
+    .resumo-bike {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    .dias {
+        margin-left: auto;
+    }
+
+}
+ 
